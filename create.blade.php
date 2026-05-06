@@ -8,43 +8,41 @@
 </head>
 <body>
 <div class="container mt-5">
-    <h2 class="mb-4">Tambah Data Tugas</h2>
+    <h2 class="mb-4">Tambah Data Masyarakat</h2>
 
-    <form action="{{ route('Tugas.store') }}" method="POST">
+    <form action="{{ route('masyarakat.store') }}" method="POST">
         @csrf
 
         <div class="mb-3">
-            <label>Nama Tugas</label>
-            <input type="text" name="nama_tugas" class="form-control">
+            <label>Nomor KK</label>
+            <input type="number" name="nomor_kk" class="form-control">
         </div>
 
         <div class="mb-3">
-            <label>Deadline</label>
-            <input type="text" name="due_date" class="form-control">
+            <label>Nomor KTP</label>
+            <input type="number" name="nomor_ktp" class="form-control">
         </div>
 
         <div class="mb-3">
-            <label>Referensi</label>
-            <input type="text" name="reference" class="form-control">
+            <label>Nama</label>
+            <input type="text" name="nama" class="form-control">
         </div>
 
         <div class="mb-3">
-            <label>Status</label>
-            <input type="boolean" name="status" class="form-control">
+            <label>Alamat</label>
+            <textarea name="alamat" class="form-control"></textarea>
         </div>
 
         <div class="mb-3">
-            <label>Nama Kelas</label>
-            <input type="text" name="nama_kelas" class="form-control">
+            <label>Jenis Kelamin</label>
+            <select name="jenis_kelamin class="form-control">
+                <option value="Laki-Laki">Laki-Laki</option>
+                <option value="Perempuan">Perempuan</option>
+            </select>
         </div>
-
-        <div class="mb-3">
-            <label>Notes</label>
-            <textarea name="notes" class="form-control"></textarea>
-        </div>
-
+        
         <button type="submit" class="btn btn-success">Simpan</button>
-        <a href="{{ route('Tugas.index') }}" class="btn btn-secondary">Kembali</a>
+        <a href="{{ route('masyarakat.index') }}" class="btn btn-secondary">Kembali</a>
     </form>
 </div>
 </body>
